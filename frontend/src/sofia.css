@@ -1,0 +1,1319 @@
+html *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+:root{
+    --first-color: #615ee1;
+    --second-color: #f9d85f;
+    --third-color:#ec9acf;
+    --fourth-color:#545454;
+    --fifth-color:#e0e0e0;
+}
+.navegadores{
+    color: var(--first-color);
+    margin-left: 3vw;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navegadores.active{
+    text-decoration: underline;
+}
+.buttonRegister{
+    background-color: var(--third-color);
+    padding: 3vh 2vw;
+    border: none;
+    border-radius: 20px;
+    width: 20vw;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+.buttonRegister:hover{
+    background-color: var(--first-color);
+}
+.contenedorHeader{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+.desklyLogo{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 40vh;
+    margin-bottom: 3vh;
+}
+.desklyLogoSign{
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50vw;
+    max-width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: -70px;
+}
+.contenedorHome{
+    display: flex;
+}
+.contenedorHeroHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorHeroHome div{
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    margin-top: 6vh;
+    margin-left: 1vw;
+}
+.contenedorHeroHome div h1{
+    font-size: 8em;
+    color: var(--fourth-color);
+}
+.contenedorHeroHome p{
+    width: 40vw;
+    font-size: 2em;
+    margin-bottom: 4vh;
+    color: var(--fourth-color);
+}
+.imageHero{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 85vw;
+    height: 95vh;
+    z-index: 1;
+}
+.div2 {
+    margin-top: -150px;
+    background: var(--second-color);
+    height: 100vh;
+    clip-path: url(#wave);
+    display: flex;
+    flex-direction: column;
+}
+.div2 h2{
+    text-align: center;
+    margin-top: 20vh;
+    font-size: 5em;
+    color: var(--fourth-color);
+    margin-bottom: 3vh;
+}
+.fraseHero2{
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    font-size: 2em;
+    color: var(--fourth-color);
+}
+.fraseHero2 p{
+    width: 40vw;
+    margin-right: 5vw;
+}
+.semicirculo{
+    height: 20vh;
+    width: 25vw;
+    background: var(--first-color);
+    border-radius: 50% / 0 0 100% 100%;
+    position: absolute;
+    right: 10vw;
+}
+.contenedorSemiCirculo{
+    position: relative;
+}
+.elipse{
+    height: 100px;
+    width: 100%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 16vh;
+}
+.elipse h2{
+    margin-top: 10vh;
+    font-size: 5em;
+    text-align: center;
+    color: var(--fourth-color);
+}
+.hands{
+    width: 50vw;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 115vh;
+}
+.circulo{
+    width: 26vw;
+    height: 50vh;
+    background: var(--first-color);
+    border-radius: 50%;
+    z-index: -1;
+}
+.contenedorCirculosHerramientas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desklyHerramientas1{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.desklyHerramientas2{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.material-icons-outlined{
+    font-size: 4em;
+    display: inline-block !important;
+}
+.desklyHerramientas1 div, .desklyHerramientas2 div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.desklyHerramientas1 div span, .desklyHerramientas2 div span{
+    margin-top: 3vh;
+}
+.desklyHerramientas1 div h3, .desklyHerramientas2 div h3{
+    font-size: 3em;
+}
+.desklyHerramientas1 div p, .desklyHerramientas2 div p{
+    font-size: 1em;
+    width: inherit;
+    height: 5vh;
+    text-align: center;
+    padding: 0 1vw;
+}
+.desklyHerramientas1 div:nth-child(1){
+    width: 17rem;
+    height: 17rem;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+.desklyHerramientas1 div:nth-child(2){
+    background-color: var(--third-color);
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+}
+.desklyHerramientas1 div:nth-child(3){
+    background-color: var(--second-color);
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+}
+.desklyHerramientas2 div:nth-child(1){
+    width: 17rem;
+    height: 17rem;
+    background: var(--second-color);
+    border-radius: 50%;
+}
+.desklyHerramientas2 div:nth-child(2){
+    background-color: var(--first-color);
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+}
+.contenedorElipse2{
+    margin-top: 70vh;
+}
+.fabrica{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    bottom: 2px;
+    z-index: -1;
+}
+footer{
+    position: relative;
+}
+.homeIconMenu2{
+    width: 95%;
+    color: #ffffff88;
+    font-size: 2rem;
+    /* margin-left: .8vw; */
+    margin-top: 1vh;
+    text-align: end;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.homeIconMenu3{
+    width: 95%;
+    color: #ffffff88;
+    font-size: 2rem;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    text-align: start;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.homeIconMenu2:hover, .homeIconMenu3:hover{
+    color: #ffffffd7;
+}
+.logoFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fourth-color);
+    font-size: 1.5em;
+}
+.contenedorFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    top: 6em;
+}
+.svgFooter{
+    position: absolute;
+    z-index: -1;
+}
+.navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.redesSociales{
+    color: white;
+    cursor: pointer;
+}
+.redesSociales h2{
+    font-size: 2em;
+}
+.navigation h2{
+    font-size: 2em;
+    color: white;
+}
+.navFooter{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.iconsFooter{
+    font-size: 2.5em;
+}
+.contenedorSign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.contenedorFormularioLogIn{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 8vw; */
+    /* max-width: 50%; */
+    /* z-index: -1; */
+}
+.contenedorFormularioLogIn h2{
+    color: var(--first-color);
+    font-size: 3em;
+    font-weight: bold;
+    /* margin-top: 15vh; */
+    margin-bottom: 6vh;
+    text-align: center;
+    max-width: 80%;
+    margin-top: 5vh;
+}
+
+.contenedorFormularioLogUp{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-left: 8vw; */
+    /* max-width: 50%; */
+    /* z-index: -1; */
+}
+
+.contenedorFormularioLogUp h2{
+    color: var(--first-color);
+    font-size: 3em;
+    font-weight: bold;
+    /* margin-top: 15vh; */
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    max-width: 70%;
+    text-align: center;
+}
+
+.contenedorinput{
+    background-color: rgba(177, 177, 177, 0.363) ;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    border: none;
+    padding: 2vh 2vw;
+    display: flex;
+    align-items: center;
+    width: 25vw;
+}
+.inputIcons{
+    font-size: 1.2em;
+}
+input{
+    background-color: transparent;
+    border: none;
+    width: 20vw;
+}
+.inputIcons, .inputIconsEye{
+    font-size: 1.2em;
+    color: var(--first-color);
+    margin-right: 1vw;
+}
+.inputIconsEye{
+    cursor: pointer;
+}
+input:focus{
+    outline: none;
+}
+.buttonEnviar{
+    border: none;
+    border-radius: 40px;
+    background-color: var(--first-color);
+    font-size: 2em;
+    padding: 2vh 2vw;
+    color: white;
+    cursor: pointer;
+    width: 20vw;
+    margin-top: 3vh;
+}
+.bGoogle{
+    margin-top: 3vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border: none;
+    display: inline-flex; 
+    align-items: center; 
+    color: var(--first-color); 
+    font-weight: 450;
+    padding: 2vh 2vw;
+    font-size: 15px;
+    border: 2px solid var(--first-color);
+    cursor: pointer;
+}
+.bGoogle svg{
+    margin-right: 1vw;
+    font-size: 2em;
+}
+.contenedorLogIn{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    /* z-index: -1; */
+    right: 0;
+}
+.contenedorLogUp{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    /* z-index: -1; */
+    left: 0;
+}
+.buttonSignUp{
+    border-radius: 40px;
+    border: 2px solid var(--third-color);
+    background-color: var(--first-color);
+    font-size: 2em;
+    padding: 2vh 2vw;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 3vh;
+}
+.contenedorHeroLogIn{
+    background-color: var(--first-color);
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+.contenedorHeroLogIn h2{
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 4vh;
+    text-align: center;
+
+}
+.heroSignUp{
+    background-color: var(--first-color);
+    opacity: 0.9;
+}
+.infoRegister1, .infoRegister2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+.infoRegister1{
+    left: 6.5vw;
+}
+.infoRegister2{
+    left: 5vw;
+}
+.contenedorSignUp{
+    display: flex;
+}
+.contenedorInfoBoard{
+    width: 100%;
+}
+.updateTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.iconoUpdateBoard{
+    color: rgba(255, 255, 255, 0.521);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.contenedorInputEditTitleBoard{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.212);
+    border-radius: 5px;
+    border: none;
+    padding: 0 1vw;
+}
+.contenedorInputEditTitleBoard input {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.521);
+}
+.taskPlanner{
+    width: 272px;
+    margin: 0 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.taskPlannerList{
+    padding: 1vh 1vw;
+    background-color: #ebecf0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    white-space: normal;
+    overflow: hidden;
+}
+.contenedorOptionsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.noMembers p{
+    color: var(--fourth-color);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+.tasksScroll{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 50vh;
+}
+.tasksScroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.tasksScroll::-webkit-scrollbar-thumb {
+    background: #615ee1;
+    border-radius: 10px;
+}
+.tasksScroll::-webkit-scrollbar-track{
+    background: #54545467;
+    border-radius: 10px;
+}
+.contenedorTaskPlanner{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 2vw;
+    margin-top: 8vh;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 13vh;
+    right: 0;
+    bottom: 0;
+    left: 5vw;
+}
+.contenedorTaskPlanner::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+   }
+.contenedorTaskPlanner::-webkit-scrollbar-thumb {
+    background: #615EE1;
+    border-radius: 10px;
+}
+.contenedorTaskPlanner::-webkit-scrollbar-track{
+    background: #54545467;
+    border-radius: 10px;
+}
+
+.buttonTaskPlanner{
+    border: none;
+    border-radius: 5px;
+    background-color: #605ee1c9;
+    color: white;
+    padding: 1vh 3vw;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.buttonTaskPlanner:hover{
+    background-color: #605ee196;
+}
+.iconoTaskPlanner{
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--fourth-color);
+    text-align: end;
+}
+.iconoTaskPlannerDelete{
+    position: absolute;
+    right: .3vw;
+    top: 1vh;
+}
+.iconoClose{
+    font-size: 1.2em;
+    cursor: pointer;
+
+}
+.headerTaskPlanner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    margin-bottom: 1vh;
+    width: 95%;
+}
+.headerTaskPlanner h3{
+    color: var(--fourth-color);
+    height: auto;
+}
+.contenedorEditTitle{
+    margin-left: 0.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 89%;
+    border: 2px solid var(--first-color);
+    padding: 2px 2vw;
+}
+.buttonAddTask{
+    border: none;
+    background-color: var(--first-color);
+    border-radius: 5px;
+    color: white;
+    padding: 1vh 0;
+    cursor: pointer;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+.contenedorTask{
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    max-width: 300px;
+    min-height: 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    margin-right: 6px;
+}
+.taskInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+.taskInfo:hover{
+    background-color: #ebecf07c;
+}
+.inputVerify{
+    width: 1vw;
+}
+.contenedorInputEditTask{
+    border: 2px solid var(--first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.inputEditTask{
+    width: 75%;
+}
+.taskTitle{
+    width: 60%;
+}
+.inputActions{
+    display: flex;
+    align-items: center;
+}
+.contenedorImageBoard{
+    width: 100%;
+    height: 53.8%;
+    position: relative;
+    z-index: -1;
+}    
+.imgBoard{
+    position: absolute;
+    top: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 53.8vh;
+    width: 100%;
+    z-index: -1;
+}
+.desklyLogo2{
+    width: 30px;
+}
+.iconoBoard{
+    font-size: 1em;
+    margin-right: 2px;
+}
+.iconoUsers{
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+.iconoVisible{
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+    padding: 4px 6px;
+}
+.iconoVisible:hover{
+    background-color: rgba(0, 0, 0, 0.082);
+}
+.contenedorInputInvite input{
+    padding: 1vh 2vw;
+}
+.contenedorInputInvite{
+    border: 2px solid var(--first-color);
+    border-radius: 5px;
+}
+.contenedorMenuBoard{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1vw;
+}
+.boardMarca{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vh;
+    background-color: var(--first-color);
+}
+.boardMarca h2{
+    font-size: 2.5em;
+    padding-bottom: 1vh;
+}
+.logoLink{
+    color: rgba(255, 255, 255, 0.521);
+    text-decoration: none;
+    /* cursor: pointer; */
+}
+.logoLink:hover{
+    color: rgba(255, 255, 255, 0.815); 
+}
+.svgWaveRosa{
+    bottom: 0;
+}
+.contenedorInfoOwner{
+    margin-right: 6px;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    /* margin-left: 27vw; */
+}
+.contenedorBoard{
+    height: 100vh;
+    display: flex;
+}
+.contenedorBoard svg{
+    position: absolute;
+    z-index: -1;
+}
+.headerBoard h3{
+    background-color: rgba(255, 255, 255, 0.301) ;
+    color: white;
+    font-weight: 450;
+    border-radius: 3px;
+    padding: 1vh 1vw;
+}
+.buttonOptionsBoard{
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.26) ;
+    font-weight: lighter;
+    font-size: 15px;
+    padding: 1vh 1vw;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.buttonOptionsBoard:hover{
+    background-color: rgba(0, 0, 0, 0.082);
+}
+.ventanaUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: absolute !important;
+    border-radius: 2px;
+    right: 15px;
+    top: 19vh;
+    min-width: 26vw;
+    padding: 1vh 1vw;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 8px 16px -4px rgb(9 30 66 / 25%), 0 0 0 1px rgb(9 30 66 / 8%);
+}
+.ventanaUser div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--first-color);
+    margin-bottom: 1vh;
+    /* transition: 1s; */
+}
+.ventanaUser h3{
+    color: var(--fourth-color);
+}
+.buttonUserAdmin{
+    color: var(--fourth-color);
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 5px 6px;
+    border: 1px solid var(--fourth-color);
+    cursor: pointer;
+}
+.inviteUsersVentana{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute !important;
+    border-radius: 2px;
+    top: 19vh;
+    right: 6vw;
+    min-width: 20vw;
+    background-color: white;
+    padding: 2vh 1vw;
+    z-index: 1;
+    box-shadow: 0 8px 16px -4px rgb(9 30 66 / 25%), 0 0 0 1px rgb(9 30 66 / 8%); 
+}
+.inviteUsersVentana div{
+    display: flex;
+    align-items: center;
+}
+.inviteUsersVentana h3{
+    font-size: 15px;
+    color: var(--fourth-color);
+    border-bottom: 2px solid var(--first-color);
+    margin-bottom: 1vh;
+}
+.contenedorAddList{
+    background-color:#ebecf0;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+.contenedorAddList div{
+    display: flex;
+    align-items: center;
+}
+.inputAddList{
+    border: 2px solid var(--first-color);
+    background-color: #ebecf0;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+}
+.iconoAddList, .iconoAddListClose{
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 3px;
+}
+.iconoAddListClose{
+    margin-top: 1vh;
+}
+.buttonAddList{
+    margin-top: 1vh;
+    background-color: var(--second-color);
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedorAddTask{
+    width: 90%;
+    background-color:#ebecf0;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+.inputAddTask{
+    border: 2px solid var(--first-color);
+    background-color: #ebecf0;
+    padding: 1vh 0.5vw;
+    width: 100%;
+    border-radius: 5px;
+}
+@media (max-width: 400px){
+    .contenedorHeroHome div{
+        margin: 0;
+    }
+    .contenedorHome{
+        flex-direction: column;
+    }
+    .contenedorHeroHome div h1{
+        font-size: 3.5em;
+        margin-right: 2vw;
+    }
+    .desklyLogo{
+        background-size: contain;
+        width: 30vw;
+    }
+    .contenedorHeroHome p{
+        font-size: 1.5em;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .imageHero{
+        height: 60vh;
+        margin-left: 2vw
+    }
+    .semicirculo{
+        width: 80vw;
+        left: 0;
+        z-index: -1;
+    }
+    .div2 h2{
+        font-size: 2em;
+    }
+    .fraseHero2 p{
+        font-size: 17px;
+    }
+    .hands{
+        background-size: contain;
+        top: 112vh;
+        width: 60vw;
+    }
+    .circulo{
+        width: 50vw;
+        height: 27vh;
+    }
+    .elipse{
+        bottom: 19vh;
+    }
+    .elipse h2{
+        font-size: 3.3em;
+    }
+    .desklyHerramientas1 div p, .desklyHerramientas2 div p{
+        display: none;
+    }
+    .desklyHerramientas1 div h3, .desklyHerramientas2 div h3{
+        font-size: 1.5em;
+    }
+    .desklyHerramientas1{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+    }
+    .desklyHerramientas1 div:nth-child(1){
+        width: 43vw;
+        height: 24vh;
+    }
+    .desklyHerramientas1 div:nth-child(2){
+        width: 43vw;
+        height: 24vh;
+    }
+    .desklyHerramientas1 div:nth-child(3){
+        width: 43vw;
+        height: 24vh;
+    }
+    .desklyHerramientas2{
+        width: 93%;
+        justify-content: space-evenly;
+    }
+    .desklyHerramientas2 div:nth-child(1){
+        width: 43vw;
+        height: 24vh;
+        background-color: var(--first-color);
+    }
+    .desklyHerramientas2 div:nth-child(2){
+        width: 43vw;
+        height: 24vh;
+        background-color: var(--third-color);
+    }
+    .material-icons-outlined{
+        font-size: 2.5em;
+    }
+    .desklyHerramientas1{
+        width: 95%;
+    }
+    .contenedorElipse2{
+        margin-top: 63vh;
+    }
+    .fabrica{
+        width: 100vw;
+    }
+    .logoFooter{
+        font-size: 1em;
+    }
+    .logoFooter h1{
+        font-size: 12px;
+    }
+    .contenedorFooter{
+        flex-direction: column;
+    }
+    .iconsFooter{
+        text-align: center;
+        font-size: 1em;
+        /* width: 100% !important; */
+    }
+    .logoFooter .desklyLogo{
+        display: none;
+    }
+    .redesSociales div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .svgFooter{
+        display: none;
+    }
+}
+@media(max-width: 410px){
+    .logoFooter, .desklyLogo{
+        display: none;
+    }
+    .redesSociales div{
+        font-size: 10px;
+    }
+    .navigation h2{
+        font-size: 8px;
+    }
+}
+@media (max-width: 980px){
+    .contenedorFooter{
+        top: 4.5em;
+    }
+    /* .desklyLogo{
+        margin-bottom: 8vh;
+    } */
+    .desklyHerramientas1 div:nth-child(1){
+        width: 13rem;
+        height: 13rem;
+        background: var(--first-color);
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div:nth-child(2){
+        background-color: var(--third-color);
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div:nth-child(3){
+        background-color: var(--second-color);
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas2 div:nth-child(1){
+        width: 13rem;
+        height: 13rem;
+        background: var(--second-color);
+        border-radius: 50%;
+    }
+    .desklyHerramientas2 div:nth-child(2){
+        background-color: var(--first-color);
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div span, .desklyHerramientas2 div span{
+        margin-top: 6vh;
+    }
+    .desklyHerramientas1 div h3, .desklyHerramientas2 div h3{
+        font-size: 2em;
+    }
+    .desklyHerramientas1 div p, .desklyHerramientas2 div p{
+        display: none;
+    }
+    .div2 h2{
+        font-size: 4em;
+    }
+    .svgFooter{
+        bottom: -49vh;
+    }
+    .contenedorHeroHome div h1{
+        font-size: 6em;
+    }
+    .circulo{
+        width: 18rem;
+    }
+    .hands{
+        background-size: contain;
+    }
+}
+
+@media (max-width: 809px){
+    .contenedorHeroHome div h1{
+        font-size: 5em;
+    }
+    .contenedorHeroHome p{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 1050px){
+    .desklyHerramientas1{
+        width: 95%;
+    }
+    .desklyHerramientas2{
+        width: 70%;
+    }
+    .contenedorFooter{
+        top: 8.5em;
+    }
+    .svgFooter{
+        bottom: -45vh;
+    }
+}
+@media(max-width:800px){
+    .contenedorHeroHome p{
+        font-size: 1.7em;  
+    }
+    .div2 h2{
+        font-size: 3em;
+    }
+    .fraseHero2 p{
+        font-size: 27px;
+    }
+    .svgFooter{
+        display: none;
+    }
+    .contenedorFooter{
+        background-color: var(--first-color);
+        height: auto;
+    }
+    .hands{
+        background-size: contain;
+        top: 110vh;
+    }
+    .contenedorHeroHome div h1{
+        font-size: 4em;
+    }
+    .circulo{
+        width: 17rem;
+    }
+    .logoFooter, .desklyLogo{
+        display: none;
+    }
+    .contenedorInfoOwner{
+       width: 30vw;
+    }
+}
+@media (max-width: 1085px){
+    .contenedorFooter{
+        top: 6em;
+    }
+}
+@media (max-width: 1360px){
+    .desklyHerramientas1 div p, .desklyHerramientas2 div p{
+        font-size: 1.2em;
+    }
+    .redesSociales div{
+        display: flex;
+        justify-content: center;
+    }
+    .logoFooter .desklyLogo{
+        width: 8vw;
+    }
+    .svgFooter{
+        bottom: -45vh;
+    }
+    /* .contenedorFooter{
+        top: 5.5em;
+    } */
+}
+@media (max-width: 700px){
+    .contenedorHeroHome div h1{
+        font-size: 3em;
+    }
+    .contenedorHeroHome p{
+        font-size: 1.5em;
+    }
+    .semicirculo{
+        width: 15rem;
+    }
+    .desklyHerramientas1 div:nth-child(1){
+        width: 11rem;
+        height: 11rem;
+        background: var(--first-color);
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div:nth-child(2){
+        background-color: var(--third-color);
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div:nth-child(3){
+        background-color: var(--second-color);
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas2 div:nth-child(1){
+        width: 11rem;
+        height: 11rem;
+        background: var(--second-color);
+        border-radius: 50%;
+    }
+    .desklyHerramientas2 div:nth-child(2){
+        background-color: var(--first-color);
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+    }
+    .logoFooter, .desklyLogo{
+        display: none;
+    }
+}
+@media (max-width: 580px){
+    .contenedorHeroHome p{
+        text-align: center;
+    }
+    .fraseHero2 p{
+        font-size: 20px;
+    }
+    .elipse h2{
+        font-size: 3em;
+    }
+    .circulo{
+        width:14rem;
+        height: 14rem;
+    }
+    .logoFooter{
+        font-size: 1em;
+        color: white;
+    }
+    .redesSociales h2{
+        font-size: 1.2em;
+    }
+    .navigation h2{
+        font-size:1.2em ;
+    }
+    .elipse{
+        bottom: 18vh;
+    }
+    .logoFooter, .desklyLogo{
+        display: none;
+    }
+    .contenedorAddList{
+        width: 60vw;
+    }
+}
+@media (max-width:480px){
+    .contenedorElipse2{
+        margin-top: 65vh;
+    }
+    .desklyHerramientas1 div:nth-child(1){
+        width: 9rem;
+        height: 9rem;
+        background: var(--first-color);
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div:nth-child(2){
+        background-color: var(--third-color);
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div:nth-child(3){
+        background-color: var(--second-color);
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas2 div:nth-child(1){
+        width: 9rem;
+        height: 9rem;
+        background: var(--second-color);
+        border-radius: 50%;
+    }
+    .desklyHerramientas2 div:nth-child(2){
+        background-color: var(--first-color);
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+    }
+    .desklyHerramientas1 div span, .desklyHerramientas2 div span{
+        margin-top: 3vh;
+    }
+    .contenedorHeader{
+        z-index: 1;
+    }
+    .contenedorInfoOwner{
+        width: 40vw;
+    }
+    .contenedorInputInvite input{
+        width: 100%;
+    }
+    .inputAddList{
+        width: 100%;
+    }
+}
+@media(max-width:510px){
+    .semicirculo{
+        display: none;
+    }
+}

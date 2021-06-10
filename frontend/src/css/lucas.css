@@ -1,0 +1,2514 @@
+:root {
+    --fcolor: #2d003d;
+    --first-color: #615ee1;
+    --second-color: #f9d85f;
+    --third-color:#ec9acf;
+    --fourth-color:#545454;
+    --fifth-color:#e0e0e0;
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.material-icons-outlined {
+    display: none;
+}
+
+
+.myDesk{
+    display: flex;
+    /* overflow: none; */
+}
+
+.mydeskContainer{
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100vh;
+    display: flex;
+    /* overflow:initial; */
+}
+
+.menu {
+    display: flex;
+}
+
+.lateralMenuClose{
+    width: 5vw;
+    background-color: var(--fourth-color);
+    background-color: var(--first-color);
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+    z-index: 1;
+}
+
+.lateralMenuOpen{
+    height: 100vh;
+    width: 17vw;
+    background-color: var(--fcolor);
+    background-color: var(--fourth-color);
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+    z-index: 10;
+}
+
+.lateralMenuClose .menuLateralInfo{
+    visibility: visible;
+    height: 100%;
+
+    position: relative;
+    /* padding-top: 5vh; */
+ }
+
+
+
+
+.lateralMenuClose .linkMenu {
+    visibility: hidden;
+}
+
+
+.lateralMenuOpen .menuLateralInfo{
+    /* opacity: 0; */
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-top: 7vh; */
+    animation-name: showMenu;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards ;
+    position: relative;
+}
+
+.userPicName{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    margin-right: 1vw
+}
+
+
+ .userPic{
+    height: 3rem;
+    width: 3rem;
+    /* min-width: 50px; */
+    background-size: cover;
+    border-radius: 5px;
+    /* border-radius: 50%; */
+    margin-left: .5vw;
+
+}
+
+
+.userCompleteName{
+    display: flex;
+    font-size: 1.3rem;
+    color: white;
+    margin-right: .5vw;
+    opacity: 1;
+    transition: 1s;
+}
+
+.link {
+    color: #ffffff88;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.link:hover {
+    color: #ffffff;
+    background-color: #ffffff11;
+    background-color: var(--first-color);
+
+    transition: .5s;
+}
+
+.homeIconMenu{
+    display: flex;
+    justify-content: center;
+    color: #ffffff88;
+    font-size: 2.5rem;
+    margin-left: .8vw;
+    transition: .5s;
+}
+
+
+.link:hover .homeIconMenu {
+    color: #ffffff;
+    transition: .8s;
+
+}
+
+.link .linkMenu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 2vw;
+    height: 10vh;
+    font-size: 1rem; 
+    /* transition: .3s; */
+
+}
+
+.lateralMenuClose .linkMenu{
+    opacity: 0;
+}
+
+.lateralMenuOpen .linkMenu{
+
+    opacity: 1;
+}
+
+.logOut {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.logoMenuLateral{
+    opacity: 1;
+    min-width: 2.6rem;
+    width: 2.6rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    margin-left: 1vw;
+    visibility: visible;
+}
+
+
+
+.notificationCircle{
+    position: absolute;
+    left: 3vw;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    background-color: var(--second-color) ;
+    /* background-color: yellow ; */
+    width: 1.1rem;
+    border-radius: 50%;
+    color: white;
+    color: var(--first-color);
+    /* color: var(--fourth-color); */
+    font-size: .8rem;
+    font-weight: bold;
+
+}
+
+.notificationCircle{
+    position: absolute;
+    left: 3vw;
+    bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    background-color: var(--second-color) ;
+    /* background-color: yellow ; */
+    width: 1.1rem;
+    border-radius: 50%;
+    color: white;
+    color: var(--first-color);
+    /* color: var(--fourth-color); */
+    font-size: .8rem;
+    font-weight: bold;
+
+}
+
+.notificationPanelClose{
+    width: 0;
+    background-color: var(--fourth-color);
+    transition: .3s;
+    z-index: 10;
+}
+
+.notificationPanelClose .notificationsHeader {
+    /* opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .1s;
+
+}
+
+.notificationPanelClose .notification {
+    visibility: hidden;
+    opacity: 0;
+    transition: .1s;
+}
+
+
+.notificationPanelOpen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fifth-color);
+    width: 18vw;
+    transition: .5s;
+    /* border-left: solid 5px var(--fourth-color); */
+    z-index: 10;
+}
+
+.notificationPanelOpen .notificationsHeader {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+    position: relative;
+}
+
+.notificationsHeader{
+    width: 100%;
+    position: relative;
+    /* background-color: var(--fourth-color); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+}
+
+.notificationsTitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    color: var(--fourth-color);
+    font-size: 1.3rem;
+}
+
+.closeNotifPanel{
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+    color: white;
+    color: var(--fourth-color);
+    top: 0;
+    right: 0;
+}
+
+.notificationPanelClose .notification {
+    /* border: solid 1px var(--first-color); */
+    padding: .5vh 1vw;
+    /* background-color: white; */
+    background-color: var(--fourth-color);
+    color: white;
+    border-radius: 10px;
+    font-size: .8rem;
+    display: flex;
+    height: 14vh;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: .5vh 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 17vw;
+}
+
+.notificationPanelOpen .notification {
+    /* border: solid 1px var(--first-color); */
+    padding: .5vh 1vw;
+    /* background-color: white; */
+    background-color: var(--fourth-color);
+    color: white;
+    border-radius: 10px;
+    font-size: .8rem;
+    display: flex;
+    height: 14vh;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: .5vh 0;
+    visibility: visible;
+    opacity: 1;
+    transition: .5s ;
+    transition-delay: .3s;
+    width: 17vw;
+}
+
+.notification button {
+    /* background-color: white; */
+    background-color: var(--fourth-color);
+    border: solid 1px black;
+    border: solid 1px white;
+    /* border: solid 1px var(--second-color); */
+    color: white;
+    /* color: var(--second-color); */
+    border-radius: 5px;
+    padding: .5vh 1vw;
+    cursor: pointer;
+    margin: 0 .5vw;
+    transition: .7s;
+}
+
+.notification button:hover{
+    background-color: var(--second-color);
+    border: solid 1px var(--second-color);
+    color:var(--fourth-color);
+    transition: .7s;
+}
+
+
+/* .myDesk .homeIconMenu{ */
+
+
+.hamburguerIcon{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 2.2rem;
+    padding-top: 1vh;
+    font-weight: bold;
+    width: 5vw;
+    height: 10vh;
+    color: white;
+    transition: 0s;
+    cursor: pointer;
+    
+}
+
+
+.hamburguerIcon:hover{
+    background-color: #ffffff22;
+    transition: 0s;
+}
+
+
+
+.headerMyDesk{
+    background-color: #cccccc;
+    background-color: var(--second-color);
+    background-color: var(--first-color);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerMyDesk h2{
+    /* color: var(--fourth-color); */
+    color: white;
+    font-size: 2.3rem;
+}
+
+.boardsContainerMyDesk{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    padding: .5vh;
+}
+
+.boardsContainerMyDesk h2{
+    margin-left: .5vw;
+    margin-top: 1vh;
+}
+
+.boardsSection{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1vh;
+    min-height: 21vh;
+}
+
+
+.nuevoTableroMas{
+    display: block;
+    /* color: var(--fcolor); */
+    color: var(--first-color);
+    font-size: 1.5rem;
+}
+
+.newBoardButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 20vh;
+    margin: 1vh 0vw 1vh .5vw;
+    color: var(--first-color);
+    cursor: pointer;
+    border: solid 2px var(--third-color);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.newBoardButton:hover{
+    color: var(--third-color);
+    transition: .5s;
+}
+
+.newBoardModal{
+    position: absolute;
+    top: 0;
+    flex-grow: 1;
+    width: 100%;
+    /* max-width: 83vw; */
+    height: 100%;
+    background-color: #000000cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    overflow: hidden;
+}
+
+.newBoard{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 32vw;
+    height: 45vh;
+    background-color: var(--first-color);
+    padding: 3vh 0;
+    border-radius: 5px;
+    /* border: solid 1px black; */
+}
+
+.newBoard input {
+    padding: 1vh 1vw;
+    width: 85%;
+    border-radius: 3px;
+    border: none;
+    background-color: #eeeeee;
+    
+}
+
+.newBoard textarea {
+    border-radius: 3px;
+    padding: 1vh 1vw;
+    width: 85%;
+    height: 30%;
+    resize: none;
+    border: none;
+    background-color: #eeeeee;
+}
+
+.newBoard button {
+    width: 50%;
+    height: 15%;
+    border: none;
+    background-color: var(--fourth-color);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.newBoard button:hover {
+    color: var(--fourth-color);
+    background-color: var(--fifth-color);
+}
+
+.closeNewBoardModal{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    font-size: 2rem;
+    /* z-index: 10; */
+    color: var(--fourth-color);
+
+}
+
+.newBoard div{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.newBoard img {
+    width: 2vw;
+}
+
+.gifMyDesk{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80%;
+    height: 80vh;
+    position: absolute;
+    z-index: -1;
+    top: 17vh;
+    left: 10vw;
+}
+
+.boardsCategories{
+    color: var(--fourth-color);
+    font-weight: lighter;
+}
+
+.closeNewBoardModal:hover{
+    color: var(--fifth-color);
+}
+
+.boardsContainerMyDesk * {
+    text-decoration: none;
+}
+
+.boardMyDesk{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 20vh;
+    border: solid 1px black;
+    margin: 1vh 0vw 1vh .5vw;
+    background-color: var(--first-color);
+    border: solid 1px black;
+    border: solid 1px white; 
+    color: white;
+    font-size: 1.rem;
+    border-radius: 10px;
+}
+.boardContainer{
+    display: flex;
+    min-height: 100vh;
+    /* flex-direction: row; */
+}
+
+.boardHeader{
+    background-color: var(--first-color);
+    width: 100%;
+}
+
+.boardTasks{
+    width: 100%;
+}
+
+.menuLateralDeskly{
+    color: white;
+}
+
+.lateralMenuClose .linkDeskly:hover {
+    background-color: var(--first-color);
+}
+
+.lateralMenuOpen .linkDeskly:hover {
+    background-color: var(--fourth-color);
+}
+
+
+
+.ModalTaskComponent {
+    position: absolute;
+    width: 50vw;
+    height: 90vh;
+    top: 5vh;
+    left: auto;
+    right: 50vh;
+    bottom: auto;
+    /* background-color: white; */
+}
+
+.OverlayModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000099;
+  }
+  
+  
+.modal{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 1vw;
+}
+.modal:focus{
+    outline: none;
+}
+.modal h3{
+    /* background-color: ; */
+    color: var(--fourth-color);
+}
+.closeModalTask{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--fourth-color);
+}
+
+.taskModalHeader{
+    /* background-color: var(--first-color); */
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskModalHeader h3{
+    font-size: 1.8rem;
+    color: var(--first-color);
+}
+
+.taskModalDescriptionContainer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+.taskModalDescriptionContainer h3{
+    color: var(--fourth-color);
+    margin-bottom: 1vh;
+}
+
+.taskModalDescriptionContainer textarea {
+    width: 100%;
+    height: 10vh;
+    resize: none;
+    background-color: #eeeeee;
+    padding: 1vh .5vw;
+    border-radius: 5px;
+    border: none;
+}
+
+/* 
+.taskModalDescriptionContainer .modalDescriptionButtons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.taskModalDescriptionContainer button {
+    background-color: white;
+    padding: .7vh 1vw;
+    border: solid 1px black;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.commentsSection{
+    flex-grow: 1;
+    max-height: 60%;
+    overflow-y: scroll;
+}
+
+.newCommentSection{
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 1vw;
+}
+
+.commentTask{
+    border: solid 1px black;
+    padding: .7vh .3vw;
+    margin: .5vh 0;
+}
+
+.userNameComment{
+    font-size: .9rem;
+}
+
+.userCommentText{
+    font-size: .85rem;
+}
+ */
+
+
+
+
+.taskModalDescriptionContainer .modalDescriptionButtons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.taskModalDescriptionContainer button {
+    background-color: white;
+    padding: .7vh 1vw;
+    border: solid 2px var(--first-color);
+    margin-top: 1vh;
+    margin-left: 1vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.commentsSection{
+    flex-grow: 1;
+    max-height: 60%;
+    overflow-y: auto;
+}
+.commentsSection::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.commentsSection::-webkit-scrollbar-thumb {
+    background: #615ee1;
+    border-radius: 10px;
+}
+.commentsSection::-webkit-scrollbar-track{
+    background: #54545467;
+    border-radius: 10px;
+}
+.newCommentSection{
+    border-top: 1px solid var(--fourth-color);
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 1vw;
+    align-items: center;
+}
+.commentTask{
+    border: solid 2px var(--first-color);
+    padding: .7vh .5vw;
+    margin: .5vh 0;
+    border-radius: 10px;
+    margin-right: 1vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.commentTask div{
+    display: flex;
+    align-items: center;
+}
+
+.userNameComment{
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.userCommentText{
+    font-size: .85rem;
+}
+
+.deleteTaskPlannerModal{
+    background-color: var(--first-color);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh 1vw;
+
+}
+
+.deleteTaskPlannerModal span{
+    color: white;
+    font-size: .8rem;
+}
+
+.deleteButtonsModalTaskPlanner{
+    display: flex;
+    /* background-color: white; */
+    justify-content: space-around;
+    margin-top: 3vh;
+    width: 80%;
+}
+
+.deleteButtonsModalTaskPlanner button{
+    background-color: var(--first-color);
+    border: white solid 1px;
+    padding: .6vh .7vw;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.deleteButtonsModalTaskPlanner button:hover{
+    background-color: white;
+    border: solid 1px var(--first-color);
+    color: var(--first-color);
+}
+
+
+
+.nameButtons{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsCommentsDelete{
+    /* background-color: red; */
+    width: 8%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.editCommentDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.editAreaComment{
+    width: 100%;
+    height: 7vh;
+    resize: none;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    border: none;
+    padding: .5vh .5vw;
+    margin-bottom: .5vh;
+}
+
+.confirmEditComment{
+    width: 15%;
+    background-color: var(--first-color);
+    border: white solid 1px;
+    padding: .6vh .7vw;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.confirmEditComment:hover{
+    background-color: white;
+    border: solid 1px var(--first-color);
+    color: var(--first-color);
+}
+
+.deleteCommentModal{
+    position: absolute;
+    background-color: var(--first-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw;
+}
+
+.deleteCommentModal span{
+    color: white;
+    font-size: .9rem;
+}
+
+.deleteButtonsModal{
+    width: 25%;
+    justify-content: space-around;
+}
+
+.deleteButtonsModal button{
+    background-color: var(--first-color);
+    border: white solid 1px;
+    padding: .6vh .7vw;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.deleteButtonsModal button:hover{
+    background-color: white;
+    border: solid 1px var(--first-color);
+    color: var(--first-color);
+}
+
+
+
+
+
+
+
+
+.signHeroIniciarSesion{
+    left: 0;
+    position: absolute;
+    background-color: red;
+    width: 50vw;
+    height: 100vh;
+    transition: 2s;
+    z-index: 10;
+  
+}
+
+.signHeroIniciarSesionAnimation{
+    animation-name: transformHero;
+    animation-duration: 1.5s;
+    /* animation-duration: 1s; */
+    animation-delay: .2s;
+}
+@keyframes transformHero {
+    0%{
+        width: 50vw;
+    }
+    40%{
+        width: 62vw;
+    }
+    100%{
+        width: 50vw;
+    }
+    
+}
+
+.signHeroRegistrar{
+    left: 50vw;
+    position: absolute;
+    background-color: red;
+    width: 50vw;
+    height: 100vh;
+    transition: 2.5s;
+    animation-delay: .1s;
+    z-index: 10;
+
+}
+.signHeroRegistrarAnimation{
+    animation-name: transformHero2;
+    animation-duration: 1.5s;
+    /* animation-duration: 1s; */
+    animation-delay: .1s;
+}
+@keyframes transformHero2 {
+    0%{
+        width: 50vw;
+    }
+    40%{
+        width: 62vw;
+    }
+    100%{
+        width: 50vw;
+    }
+    
+}
+
+.registerAnimation{
+    animation-name: moverRegister;
+    animation-duration: 2.5s;
+    animation-delay: .1s;
+}
+@keyframes moverRegister {
+    0%{
+        margin-left: 0;
+    }
+    45%{
+        margin-left: 15vw;
+    }
+    56%{
+        margin-left: 0;
+    }
+    
+}
+.registerAnimation2{
+    animation-name: moverRegister2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes moverRegister2 {
+    0%{
+        margin-left:5vw;
+    }
+    30%{
+        margin-left: 15vw;
+    }
+    100%{
+        margin-left: 0;
+    }
+    
+}
+
+.loginAnimation{
+    animation-name: moverLogin;
+    animation-duration: 2s;
+}
+@keyframes moverLogin {
+    0%{
+        margin-right: 0;
+    }
+    50%{
+        margin-right: 12vw;
+    }
+    55%{
+        margin-right: 0;
+    }
+    
+}
+
+.loginAnimation2{
+    animation-name: moverLogin2;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+}
+@keyframes moverLogin2 {
+    0%{
+        margin-right:5vw;
+    }
+    20%{
+        margin-right: 18vw;
+    }
+    100%{
+        margin-right: 0;
+    }
+}
+
+
+.closeGeneric{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    color: var(--fourth-color);
+    cursor: pointer;
+}
+
+.colorOwner{
+    background-color: var(--second-color) !important;
+}
+.colorAdmin{
+    background-color: var(--first-color) !important;
+}
+.colorUser{
+    background-color: var(--third-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.colorOwner{
+    background-color: red;
+}
+.colorAdmin{
+    background-color: black;
+}
+.colorUser{
+    background-color: blue;
+}
+
+
+
+
+.modalBoard{
+    justify-content: space-around;
+    align-items: center;
+    width: 40vw;
+    height: 50vh;
+    margin-top: 20vh;
+    margin-left: 8vw;
+    background-color: var(--first-color);
+}
+
+.modalBoard span{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.modalBoard button{
+    transform: scale(1.5);
+}
+
+/* .modalBoard .deleteButtonsModalTaskPlanner{
+
+
+} */
+
+.warningIcon{
+    color: var(--second-color);
+    font-size: 14vw;
+    margin-top: 40px;
+}
+
+.modalBoardButtons{
+    background-color: #615ee1;
+    font-size: 3vw;
+    margin: 10px;
+}
+
+.contentModalButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.closeLateralMenu{
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 1.8rem;
+    color: #ffffffaa;
+    visibility: hidden;
+    z-index: 55;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    
+
+
+
+    .newBoard{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 60vw;
+        height: 45vh;
+        background-color: var(--first-color);
+        padding: 3vh 0;
+        border-radius: 5px;
+        /* border: solid 1px black; */
+    }
+    
+    .newBoard input {
+        padding: 1vh 1vw;
+        width: 85%;
+        border-radius: 3px;
+        border: none;
+        background-color: #eeeeee;
+        
+    }
+    
+    .newBoard textarea {
+        border-radius: 3px;
+        padding: 1vh 1vw;
+        width: 85%;
+        height: 30%;
+        resize: none;
+        border: none;
+        background-color: #eeeeee;
+    }
+    
+    .newBoard button {
+        width: 50%;
+        height: 15%;
+        border: none;
+        background-color: var(--fourth-color);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .newBoard button:hover {
+        color: var(--fourth-color);
+        background-color: var(--fifth-color);
+    }
+
+
+
+
+
+
+    .lateralMenuClose{
+        width: 0;
+        background-color: var(--fourth-color);
+        background-color: var(--first-color);
+        display: flex;
+        flex-direction: column;
+        transition: 0s;
+    }
+    
+    .lateralMenuOpen{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--fcolor);
+        background-color: var(--fourth-color);
+        display: flex;
+        flex-direction: column;
+        transition: 0s;
+    }
+    
+    .lateralMenuClose .menuLateralInfo{
+        visibility: visible;
+        height: 100%;
+        position: relative;  
+    }
+    
+    .lateralMenuClose .link {
+        visibility: hidden;
+    }
+
+    .lateralMenuClose .logoMenuLateral {
+        visibility: hidden;
+    }
+    
+    
+    .lateralMenuOpen .menuLateralInfo{
+        /* opacity: 0; */
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        /* padding-top: 7vh; */
+        animation-name: showMenu;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards ;
+        position: relative;
+    }
+
+    .lateralMenuOpen .link{
+        padding: 2vh 0 2vh 30vw;
+        /* transform: scale(1); */
+        transition: 0s;
+    }
+
+    .logoMenuLateral{
+        opacity: 1;
+        min-width: 2.6rem;
+        width: 2.6rem;
+        height: 2.5rem;
+        background-size: cover;
+        background-position: center;
+        margin-left: 1vw;
+        visibility: visible;
+    }
+
+    
+    .homeIconMenu{
+        display: flex;
+        justify-content: center;
+        color: #ffffff88;
+        font-size: 2.5rem;
+        margin-left: .8vw;
+        transition: 0s;
+    }
+
+    .hamburguerIcon{
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        font-size: 2.2rem;
+        padding-top: 1vh;
+        font-weight: bold;
+        width: 50px;
+        height: 10vh;
+        color: white;
+        transition: .4s;
+        cursor: pointer;
+        
+    }
+
+    .link{
+        transition: 0s;
+    }
+
+    .link:hover .homeIconMenu {
+        color: #ffffff;
+        transition: 0s;
+    
+    }
+    
+
+    .lateralMenuClose .notificationCircle {
+        visibility: hidden;
+    }
+
+    .notificationCircle{
+        position: absolute;
+        left: 50vw;
+        bottom: 5.5vh;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        background-color: var(--second-color) ;
+        /* background-color: yellow ; */
+        width: 1.1rem;
+        border-radius: 50%;
+        color: white;
+        color: var(--first-color);
+        /* color: var(--fourth-color); */
+        font-size: .8rem;
+        font-weight: bold;
+
+    }
+
+    .notificationPanelClose{
+        width: 0;
+        background-color: var(--fourth-color);
+        transition: 0s;
+    }
+
+    .notificationPanelClose .notificationsHeader {
+        /* opacity: 0; */
+        visibility: hidden;
+        opacity: 0;
+        transition: 0s;
+
+    }
+
+    .notificationPanelClose .notification {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0s;
+    }
+
+
+    .notificationPanelOpen {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--fifth-color);
+        width: 100vw;
+        height: 100%;
+        transition: 0s;
+        /* border-left: solid 5px var(--fourth-color); */
+    }
+
+    .notificationPanelOpen .notificationsHeader {
+        visibility: visible;
+        opacity: 1;
+        transition: 1s;
+        position: relative;
+    }
+
+    .notificationsHeader{
+        width: 100%;
+        position: relative;
+        /* background-color: var(--fourth-color); */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5vh;
+    }
+
+    .notificationsTitle{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: white;
+        color: var(--fourth-color);
+        font-size: 1.3rem;
+    }
+
+    .closeNotifPanel{
+        position: absolute;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--first-color);
+        color: white;
+        color: var(--fourth-color);
+        top: 0;
+        right: 0;
+    }
+
+    .notificationPanelClose .notification {
+        /* border: solid 1px var(--first-color); */
+        padding: .5vh 1vw;
+        /* background-color: white; */
+        background-color: var(--fourth-color);
+        color: white;
+        border-radius: 10px;
+        font-size: .8rem;
+        display: flex;
+        height: 14vh;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        margin: .5vh 0;
+        visibility: hidden;
+        opacity: 0;
+        width: 90vw;
+    }
+
+    .notificationPanelOpen .notification {
+        /* border: solid 1px var(--first-color); */
+        padding: .5vh 1vw;
+        /* background-color: white; */
+        background-color: var(--fourth-color);
+        color: white;
+        border-radius: 10px;
+        font-size: .8rem;
+        display: flex;
+        height: 14vh;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        margin: .5vh 0;
+        visibility: visible;
+        opacity: 1;
+        transition: 0s ;
+        transition-delay: 0s;
+        width: 90vw;
+    }
+
+    .notification button {
+        /* background-color: white; */
+        background-color: var(--fourth-color);
+        border: solid 1px black;
+        border: solid 1px white;
+        /* border: solid 1px var(--second-color); */
+        color: white;
+        /* color: var(--second-color); */
+        border-radius: 5px;
+        padding: .5vh 1vw;
+        cursor: pointer;
+        margin: 0 .5vw;
+        transition: .7s;
+    }
+
+    .notification button:hover{
+        background-color: var(--second-color);
+        border: solid 1px var(--second-color);
+        color:var(--fourth-color);
+        transition: .7s;
+    }
+
+
+    
+    .lateralMenuOpen .menuLateralInfo{
+        /* opacity: 0; */
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        /* padding-top: 3vh; */
+        animation-name: showMenu;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards ;
+        position: relative;
+    }
+
+    .linkDeskly{
+        margin-top: 5vh;
+    }
+
+    .closeLateralMenu{
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        font-size: 2rem;
+        color: #ffffffaa;
+        visibility: visible;
+    }
+    .boardMyDesk{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 15vw;
+        min-width: 150px;
+        height: 20vh;
+        /* border: solid 1px black; */
+        margin: 1vh 0vw 1vh .5vw;
+        /* background-color: var(--first-color); */
+        /* border: solid 1px black; */
+        border: solid 1px white;
+        color: white;
+        font-size: 1.rem;
+        border-radius: 10px;
+    }
+    
+    .newBoardButton{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15vw;
+        min-width: 150px;
+
+        height: 20vh;
+        margin: 1vh 0vw 1vh .5vw;
+        color: var(--first-color);
+        cursor: pointer;
+        border: solid 2px var(--third-color);
+        border-radius: 10px;
+        transition: .5s;
+    }
+    
+
+    
+    .boardsContainerMyDesk{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        width: 100%;
+        overflow-y: scroll;
+        padding: .5vh;
+    }
+
+    
+    .boardsSection{
+        display: flex;
+        
+    }
+        
+    .contenedorFormularioLogUp h2{
+        color: var(--first-color);
+        font-size: 2em;
+        font-weight: bold;
+        /* margin-top: 15vh; */
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        max-width: 70%;
+        text-align: center;
+    }
+    .contenedorFormularioLogIn h2{
+        color: var(--first-color);
+        font-size: 2.5em;
+        font-weight: bold;
+        /* margin-top: 15vh; */
+        margin-top: 10vh;
+        margin-bottom: 2vh;
+        max-width: 70%;
+        text-align: center;
+    }
+
+    .buttonEnviar{
+        border: none;
+        border-radius: 40px;
+        background-color: var(--first-color);
+        font-size: 1.5em;
+        padding: 2vh 2vw;
+        color: white;
+        cursor: pointer;
+        width: 20vw;
+        margin-top: 3vh;
+    }
+    .contenedorLogIn{
+        display: flex;
+        width: 45%;
+        height: 100%;
+        position: absolute;
+        /* z-index: -1; */
+        right: 0;
+    }
+    .buttonSignUp{
+        border-radius: 40px;
+        border: 2px solid var(--third-color);
+        background-color: var(--first-color);
+        font-size: 1.4em;
+        padding: 2vh 2vw;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 3vh;
+    }
+    .infoRegister1 h2,
+    .infoRegister2 h2{
+        font-size: 1.6rem;
+    }
+
+
+    
+
+.ModalTaskComponent {
+    position: absolute;
+    width: 80vw;
+    height: 90vh;
+    top: 5vh;
+    left: auto;
+    right: 10%;
+    bottom: auto;
+    /* background-color: white; */
+}
+
+.OverlayModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000099;
+  }
+  
+  
+.modal{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 1vw;
+}
+.modal:focus{
+    outline: none;
+}
+.modal h3{
+    color: var(--fourth-color);
+}
+.closeModalTask{
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--fourth-color);
+}
+
+.taskModalHeader{
+    /* background-color: var(--first-color); */
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskModalHeader h3{
+    font-size: 1.8rem;
+    color: var(--first-color);
+}
+
+.taskModalDescriptionContainer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+.taskModalDescriptionContainer h3{
+    color: var(--fourth-color);
+    margin-bottom: 1vh;
+}
+
+.taskModalDescriptionContainer textarea {
+    width: 100%;
+    height: 10vh;
+    resize: none;
+    background-color: #eeeeee;
+    padding: 1vh .5vw;
+    border-radius: 5px;
+    border: none;
+}
+
+.modalBoard{
+    justify-content: space-around;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 20vh;
+    margin-left: 15vw;
+    background-color: var(--first-color);
+}
+
+.modalBoard span{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.modalBoard button{
+    transform: scale(1.5);
+}
+
+}
+    
+
+@media (max-width: 799px) {
+    .divEye{
+        position: absolute;
+        right: 5px;
+    }
+
+    .contenedorinput{
+        position: relative;
+        background-color: rgba(177, 177, 177, 0.363) ;
+        border-radius: 10px;
+        margin-bottom: 1vh;
+        border: none;
+        padding: 2vh 2vw;
+        display: flex;
+        align-items: center;
+        width: 30vw;
+    }
+
+   
+   .userCompleteName{
+        display: none;
+    }
+
+    .notificationCircle{
+        position: absolute;
+        left: 58vw;
+        bottom: 5.5vh;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        background-color: var(--second-color) ;
+        /* background-color: yellow ; */
+        width: 1.1rem;
+        border-radius: 50%;
+        color: white;
+        color: var(--first-color);
+        /* color: var(--fourth-color); */
+        font-size: .8rem;
+        font-weight: bold;
+    }
+    
+    .deleteCommentModal{
+        position: absolute;
+        background-color: var(--first-color);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1vw;
+    }
+
+    
+    .modalBoard{
+        justify-content: space-around;
+        align-items: center;
+        width: 70vw;
+        height: 50vh;
+        margin-top: 20vh;
+        margin-left: 7vw;
+        background-color: var(--first-color);
+    }
+
+    .modalBoard span{
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .modalBoard button{
+        transform: scale(1.5);
+    }   
+
+}
+
+@media (max-width: 599px) {
+    .deleteButtonsModal{
+        width: 45%;
+        justify-content: space-around;
+    }
+    
+    
+
+    .ModalTaskComponent {
+        position: absolute;
+        width: 90vw;
+        height: 90vh;
+        top: 5vh;
+        left: auto;
+        right: 5%;
+        bottom: auto;
+        /* background-color: white; */
+    }
+
+    .OverlayModal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00000099;
+    }
+    
+    
+    .modal{
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 1vh 1vw;
+    }
+
+    .commentTask{
+        border: solid 2px var(--first-color);
+        padding: .7vh 1.7vw;
+        margin: .5vh 0;
+        border-radius: 10px;
+        margin-right: 1vw;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .commentTask div{
+        display: flex;
+        align-items: center;
+    }
+    
+    .userNameComment{
+        font-size: .9rem;
+        font-weight: bold;
+    }
+    
+    .userCommentText{
+        font-size: .85rem;
+    }
+    
+    .closeLateralMenu{
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        font-size: 1.8rem;
+        color: #ffffffaa;
+        visibility: visible;
+    }
+
+    .newBoard{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 75vw;
+        height: 50vh;
+        background-color: var(--first-color);
+        padding: 3vh 0;
+        border-radius: 5px;
+        /* border: solid 1px black; */
+    }
+    
+    .newBoard input {
+        padding: 1vh 1vw;
+        width: 85%;
+        border-radius: 3px;
+        border: none;
+        background-color: #eeeeee;
+        
+    }
+    
+    .newBoard textarea {
+        border-radius: 3px;
+        padding: 1vh 1vw;
+        width: 85%;
+        height: 30%;
+        resize: none;
+        border: none;
+        background-color: #eeeeee;
+    }
+    
+    .newBoard button {
+        width: 50%;
+        height: 15%;
+        border: none;
+        background-color: var(--fourth-color);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .newBoard button:hover {
+        color: var(--fourth-color);
+        background-color: var(--fifth-color);
+    }
+
+
+    .infoRegister1 ,
+    .infoRegister2 {
+        margin-left: 15vw;
+    }
+
+    .homeIconMenu2{
+        width: 10%;
+        color: #ffffff88;
+        font-size: 2rem;
+        /* margin-left: .8vw; */
+        margin-top: 1vh;
+        text-align: end;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+    }
+    .notificationCircle{
+        position: absolute;
+        left: 67vw;
+        bottom: 5.5vh;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        background-color: var(--second-color) ;
+        /* background-color: yellow ; */
+        width: 1.1rem;
+        border-radius: 50%;
+        color: white;
+        color: var(--first-color);
+        /* color: var(--fourth-color); */
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+
+    .desklyLogoSign{
+        display: none;
+        justify-content: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50vw;
+        max-width: 50vw;
+        height: 100vh;
+        position: absolute;
+        top: -70px;
+    }
+    
+
+    .contenedorHeroLogIn{
+        background-color: var(--first-color);
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+    }
+    .contenedorHeroLogIn h2{
+        color: white;
+        font-size: 1.2em;
+        margin-bottom: 1vh;
+        text-align: center;
+    
+    }
+
+    .buttonSignUp{
+        border-radius: 40px;
+        border: 2px solid var(--third-color);
+        background-color: var(--first-color);
+        font-size: 1em;
+        padding: 1.3vh 2vw;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 1vh;
+    }
+
+    .contenedorLogIn{
+        display: flex;
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        right: 5%;
+    }
+
+    .contenedorLogUp{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .contenedorinput{
+        background-color: rgba(177, 177, 177, 0.363) ;
+        border-radius: 10px;
+        margin-bottom: 1vh;
+        border: none;
+        padding: 2vh 2vw;
+        display: flex;
+        align-items: center;
+        width: 50vw;
+    }
+
+    .buttonEnviar{
+        border: none;
+        border-radius: 40px;
+        background-color: var(--first-color);
+        font-size: 1.2em;
+        padding: 1vh 1vw;
+        color: white;
+        cursor: pointer;
+        width: 30vw;
+        margin-top: 2vh;
+    }
+
+    .bGoogle{
+        margin-top: 3vh;
+        background-color: rgb(255, 255, 255);
+        border-radius: 40px;
+        border: none;
+        display: inline-flex; 
+        align-items: center; 
+        color: var(--first-color); 
+        font-weight: 450;
+        padding: .5vh .5vw;
+        font-size: .9rem;
+        border: 2px solid var(--first-color);
+        cursor: pointer;
+    }
+    .bGoogle svg{
+        margin-right: 1vw;
+        font-size: 1.5em;
+    }
+
+    .signHeroIniciarSesion{
+        left: 0;
+        bottom: 85vh;
+        position: absolute;
+        background-color: red;
+        width: 100vw;
+        height: 15vh;
+        transition: 2s;
+        z-index: 10;
+      
+    }
+        
+    .signHeroIniciarSesionAnimation{
+        animation-name: transformHero;
+        animation-duration: 2s;
+        /* animation-duration: 1s; */
+        animation-delay: 0s;
+    }
+
+    @keyframes transformHero {
+        0%{
+            width: 100vw;
+            bottom: 85vh;
+            height: 15vh;
+        }
+        25%{
+            bottom: 85vh;
+        }
+        50%{
+            width: 100vw;
+            height: 100%;
+        }
+        75%{
+            bottom: 0;
+
+        }
+        100%{
+            width: 100vw;
+            bottom: 0;
+            height: 15vh;
+        }
+        
+    }
+
+    /* .signHeroRegistrar{
+        left: 50vw;
+        position: absolute;
+        background-color: red;
+        width: 50vw;
+        height: 100vh;
+        transition: 2.5s;
+        animation-delay: .1s;
+        z-index: 10;
+
+    } */
+
+    .signHeroRegistrar{
+        /* display: none; */
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        background-color: red;
+        width: 100vw;
+        height: 15vh;
+        transition: 2.5s;
+        animation-delay: 0;
+        z-index: 10;
+    }
+
+
+
+    .signHeroRegistrarAnimation{
+        animation-name: transformHero2;
+        animation-duration: 2s;
+        /* animation-duration: 1s; */
+        animation-delay: 0s;
+    }
+    @keyframes transformHero2 {
+        0%{
+            width: 100vw;
+            bottom: 0;
+            height: 15vh;
+        }
+        25%{
+            bottom: 0;
+        }
+        50%{
+            width: 100vw;
+            height: 100%;
+        }
+        75%{
+            bottom: 85vh;
+
+        }
+        100%{
+            width: 100vw;
+            bottom: 85vh;
+            height: 15vh;
+        }
+    }
+
+    .registerAnimation{
+        animation-name: moverRegister;
+        animation-duration: 2.5s;
+        animation-delay: .1s;
+    }
+    @keyframes moverRegister {
+        0%{
+            margin-left: 0;
+        }
+        45%{
+            margin-left: 0;
+        }
+        56%{
+            margin-left: 0;
+        }
+        
+    }
+    .registerAnimation2{
+        animation-name: moverRegister2;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes moverRegister2 {
+        0%{
+            margin-left:0;
+        }
+        30%{
+            margin-left: 0;
+        }
+        100%{
+            margin-left: 0;
+        }
+        
+    }
+
+    .loginAnimation{
+        animation-name: moverLogin;
+        animation-duration: 2s;
+    }
+    @keyframes moverLogin {
+        0%{
+            margin-right: 0;
+        }
+        50%{
+            margin-right: 0;
+        }
+        55%{
+            margin-right: 0;
+        }
+        
+    }
+
+    .loginAnimation2{
+        animation-name: moverLogin2;
+        animation-duration: 2s;
+        animation-delay: .3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes moverLogin2 {
+        0%{
+            margin-right:0;
+        }
+        20%{
+            margin-right: 0;
+        }
+        100%{
+            margin-right: 0;
+        }
+    }
+
+
+        
+    .responsiveAnimationIn2{
+        visibility: visible;
+        padding-top: 15vh;
+        opacity: 1;
+        transition: 1.5s;
+        transition-delay: 1s;
+        
+    }
+
+    .responsiveAnimationIn{
+        /* display: none;    */
+        visibility: hidden; 
+        opacity: 0;
+        /* transition-delay: 2s; */
+
+        transition: 1s;
+    }
+
+    .responsiveAnimationUp{
+        visibility: visible;
+        opacity: 1;
+        transition: 1.5s;
+        transition-delay: 1s;
+
+    }
+
+    .responsiveAnimationUp2{
+        /* display: none;    */
+
+        visibility: hidden; 
+        opacity: 0;
+        /* transition-delay: 2s; */
+
+        transition: 1s;
+
+    }
+
+
+    .deleteCommentModal span{
+        color: white;
+        font-size: .7rem;
+    }
+
+
+    .modalBoard{
+        justify-content: space-around;
+        align-items: center;
+        width: 85vw;
+        height: 50vh;
+        margin-top: 20vh;
+        margin-left: 1vw;
+        background-color: var(--first-color);
+    }
+
+    .modalBoard span{
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .modalBoard button{
+        transform: scale(1.5);
+    }   
+
+}
+
+@media (max-width: 400px) {
+
+    .deleteButtonsModal{
+        width: 50%;
+        justify-content: space-around;
+    }
+
+    .commentTask{
+        border: solid 2px var(--first-color);
+        padding: .7vh 2.8vw;
+        margin: .5vh 0;
+        border-radius: 10px;
+        margin-right: 1vw;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .newBoard{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 95vw;
+        height: 50vh;
+        background-color: var(--first-color);
+        padding: 3vh 0;
+        border-radius: 5px;
+        /* border: solid 1px black; */
+    }
+    
+    .newBoard input {
+        padding: 1vh 1vw;
+        width: 95%;
+        border-radius: 3px;
+        border: none;
+        background-color: #eeeeee;
+        
+    }
+    
+    .newBoard textarea {
+        border-radius: 3px;
+        padding: 1vh 1vw;
+        width: 95%;
+        height: 30%;
+        resize: none;
+        border: none;
+        background-color: #eeeeee;
+    }
+    
+    .newBoard button {
+        width: 80%;
+        height: 15%;
+        border: none;
+        background-color: var(--fourth-color);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .newBoard button:hover {
+        color: var(--fourth-color);
+        background-color: var(--fifth-color);
+    }
+
+    .contenedorLogIn{
+        display: flex;
+        width: 95%;
+        height: 100%;
+        position: absolute;
+        /* z-index: -1; */
+        right: 0;
+    }
+
+    
+    .contenedorLogUp{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        /* z-index: -1; */
+        left: 5%;
+    }
+
+    .buttonSignUp{
+        border-radius: 40px;
+        border: 2px solid var(--third-color);
+        background-color: var(--first-color);
+        font-size: 1em;
+        padding: 1.3vh 2vw;
+        color: white;
+        cursor: pointer;
+        margin-bottom: 1vh;
+        margin-right: 5vw;
+    }
+
+
+    .notificationCircle{
+        position: absolute;
+        left: 77vw;
+        bottom: 5.5vh;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        background-color: var(--second-color) ;
+        /* background-color: yellow ; */
+        width: 1.1rem;
+        border-radius: 50%;
+        color: white;
+        color: var(--first-color);
+        /* color: var(--fourth-color); */
+        font-size: .8rem;
+        font-weight: bold;
+    }
+    .contenedorinput{
+        background-color: rgba(177, 177, 177, 0.363) ;
+        border-radius: 10px;
+        margin-bottom: 1vh;
+        border: none;
+        padding: 2vh 2vw;
+        display: flex;
+        align-items: center;
+        width: 75vw;
+    }
+
+        
+    .contenedorFormularioLogUp h2{
+        color: var(--first-color);
+        font-size: 1.5em;
+        font-weight: bold;
+        /* margin-top: 15vh; */
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        max-width: 70%;
+        text-align: center;
+    }
+    .contenedorFormularioLogIn h2{
+        color: var(--first-color);
+        font-size: 2.5em;
+        font-weight: bold;
+        /* margin-top: 15vh; */
+        margin-top: 10vh;
+        margin-bottom: 2vh;
+        max-width: 70%;
+        text-align: center;
+    }
+
+        
+    .contenedorFormularioLogUp{
+        /* position: absolute; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin-left: 8vw; */
+        width: 100%;
+        /* z-index: -1; */
+    }
+    .infoRegister1 ,
+        .infoRegister2 {
+            margin-left: 10%;
+    }
+
+    
+    .responsiveAnimationIn2{
+        visibility: visible;
+        padding-top: 15vh;
+        opacity: 1;
+        transition: 1.5s;
+        transition-delay: 1s;
+        
+    }
+    
+    .responsiveAnimationIn{
+        /* display: none;    */
+        visibility: hidden; 
+        opacity: 0;
+        /* transition-delay: 2s; */
+
+        transition: 1s;
+    }
+
+    .responsiveAnimationUp{
+        visibility: visible;
+        opacity: 1;
+        transition: 1.5s;
+        transition-delay: 1s;
+
+    }
+    
+    .responsiveAnimationUp2{
+        /* display: none;    */
+
+        visibility: hidden; 
+        opacity: 0;
+        /* transition-delay: 2s; */
+
+        transition: 1s;
+
+    }
+}
+
+
+
